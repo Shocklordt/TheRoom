@@ -17,7 +17,6 @@ const publicRouter = new Router({ prefix: '/room' });
 
 publicRouter.post('/42', chats.create);
 publicRouter.get('/41', chats.list);
-publicRouter.post('/postrecieve', chats.update);
 
 app.use(publicRouter.routes());
 app.use(publicRouter.allowedMethods());

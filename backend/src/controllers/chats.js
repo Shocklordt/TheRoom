@@ -13,14 +13,6 @@ exports.list = async (ctx) => {
   ctx.body = response;
 };
 
-exports.update = async (ctx) => {
-  const params = ctx.request.body;
-
-  console.log(ctx.request.body)
-
-  ctx.status = 201;
-}
-
 exports.create = async (ctx) => {
   const params = ctx.request.body;
 
