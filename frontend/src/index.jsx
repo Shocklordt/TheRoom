@@ -27,7 +27,6 @@ const GetData = async () => {
 class Game extends React.Component {
   async componentWillMount() {
     const response = await GetData()
-    console.log(response)
   }
   render() {
     return (
