@@ -15,6 +15,7 @@ const GetData = async () => {
     console.log("Getting greeting from "+url)
     const response = await fetch(url);
     const results = await response.json()
+    console.log(results)
     return results['results']
   } catch (error) {
     console.error(error);
@@ -26,13 +27,16 @@ const GetData = async () => {
 
 class Game extends React.Component{
   componentWillMount(){
-    var colourresult = await GetData()
+    const colourresult = GetData()
     console.log(colourresult)
     if(colourresult == true){
       this.setState({colour: 'green'})
     }
-    else{
+    else if(colourresult == false){
       this.setState({colour: 'red'})
+    }
+    else{
+      this.setState({colour: ''})
     }
   }
   render(){
