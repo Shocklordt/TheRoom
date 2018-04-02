@@ -28,7 +28,7 @@ class Game extends React.Component {
   async componentWillMount() {
     const response = await GetData()
   }
-  render(){
+  render(response){
     if(response == false){
       return document.getElementById('box1').style.color = 'red'
     }
