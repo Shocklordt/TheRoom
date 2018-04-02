@@ -24,16 +24,12 @@ const GetData = async () => {
 
 
 
-class Game extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {open: GetData()}
-  }
-  async componentWillMount(){
-    console.log(this.state.open._v)
+class Game extends React.Component{
+  componentWillMount(){
+    const results = GetData()
   }
   render(){
-    const open = this.state.open._v
+    const open = results
     if(open == false){
       return (
         document.getElementById('box1').style.color = 'red'
