@@ -27,6 +27,7 @@ const GetData = async () => {
 class Game extends React.Component {
   async componentWillMount() {
     const response = await GetData()
+    console.log(Game.response)
   }
   render(){
     if(Game.response == false){
