@@ -26,7 +26,7 @@ const GetData = async () => {
 
 class Game extends React.Component{
   componentWillMount(){
-    var colourresult = GetData()
+    var colourresult = await GetData()
     console.log(colourresult)
     if(colourresult == true){
       this.setState({colour: 'green'})
