@@ -28,9 +28,8 @@ class Game extends React.Component{
   constructor(props){
     super(props);
     this.props = {colour: ''};
-    console.log(this.props)
   }
-  async componentWillMount(){
+  async componentWillMount(props){
     const colourresult = await GetData()
     console.log(this.props.colour)
     if(colourresult == true){
@@ -44,7 +43,7 @@ class Game extends React.Component{
     }
     console.log(this.props.colour)
   }
-  render(){
+  render(props){
       return (
         document.getElementById('box1').style.color = this.props.colour
       )
