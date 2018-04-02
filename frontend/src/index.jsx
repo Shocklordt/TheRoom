@@ -26,7 +26,7 @@ const GetData = async () => {
 
 class Game extends React.Component {
   componentWillMount() {
-    this.state = {open: await GetData()}
+    this.state = {open: GetData()}
     console.log(this.state.open)
   }
   render(){
