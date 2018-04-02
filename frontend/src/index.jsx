@@ -37,9 +37,10 @@ class Game extends React.Component{
       this.setState({colour: ''})
     }
   }
-  render(){
+  async render(){
+    const colour = await this.state.colour
       return (
-        document.getElementById('box1').style.color = this.state.colour
+        document.getElementById('box1').style.color = colour
       )
   }
 }
