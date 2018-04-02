@@ -16,7 +16,7 @@ exports.list = async (ctx) => {
 exports.status = async (ctx) => {
 
   let response = {
-    results: true
+    results: false
   };
   
   ctx.body = response;
