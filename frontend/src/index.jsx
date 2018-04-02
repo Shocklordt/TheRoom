@@ -25,8 +25,8 @@ const GetData = async () => {
 
 
 class Game extends React.Component {
-  constructor(){
-    super(this)
+  constructor(props){
+    super(props)
     this.state = {open: GetData()}
   }
   render(){
