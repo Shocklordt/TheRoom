@@ -17,7 +17,9 @@ exports.status = async (ctx) => {
 
   let response = {
     results: true
-  }
+  };
+  
+  ctx.body = response;
 }
 
 exports.create = async (ctx) => {
