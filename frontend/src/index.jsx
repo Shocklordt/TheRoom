@@ -28,13 +28,14 @@ class Game extends React.Component {
   async componentWillMount() {
     const response = await GetData()
   }
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
+  render(){
+    if(response == false){
+      document.getElementById('box1').style.color = 'red'
+    }
+  };
 }
+
+
 
 ReactDOM.render(
   <Game />,
