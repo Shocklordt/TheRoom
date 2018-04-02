@@ -11,7 +11,7 @@ const baseURL = "http://195.201.28.131:9000"
 
 const GetData = async () => {
   try {
-    const url = `${baseURL}/room/41`
+    const url = `${baseURL}/room/status`
     console.log("Getting greeting from "+url)
     const response = await fetch(url);
     return response.json()

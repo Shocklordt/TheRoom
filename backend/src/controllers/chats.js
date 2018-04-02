@@ -13,6 +13,13 @@ exports.list = async (ctx) => {
   ctx.body = response;
 };
 
+exports.status = async (ctx) => {
+
+  let response = {
+    results: true
+  }
+}
+
 exports.create = async (ctx) => {
   const params = ctx.request.body;
 
