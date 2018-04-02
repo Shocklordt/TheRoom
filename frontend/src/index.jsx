@@ -25,11 +25,10 @@ const GetData = async () => {
 
 
 class Game extends React.Component {
-  /**async componentWillMount() {
+  async componentWillMount() {
     const response = await GetData()
-  }**/
-  render(){
-    const response = await GetData()
+  }
+  render(response=false){
     if(response == false){
       return (
         document.getElementById('box1').style.color = 'red'
