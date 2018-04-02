@@ -25,14 +25,10 @@ const GetData = async () => {
 
 
 class Game extends React.Component {
-  constructor(){
-    this.state = {open: await GetData()}
-  }
-  
-  /**async componentWillMount() {
+  componentWillMount() {
     this.state = {open: await GetData()}
     console.log(this.state.open)
-  }**/
+  }
   render(){
     const open = this.state.open
     if(open == false){
