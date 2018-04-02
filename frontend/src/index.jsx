@@ -31,6 +31,7 @@ class Game extends React.Component{
   }
   async componentWillMount(){
     const colourresult = await GetData()
+    console.log(this.props.colour)
     if(colourresult == true){
       this.props = {colour: 'green'}
     }
