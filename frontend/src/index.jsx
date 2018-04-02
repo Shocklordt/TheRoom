@@ -27,23 +27,23 @@ const GetData = async () => {
 class Game extends React.Component{
   constructor(props){
     super(props)
-    this.state = {colour: ''}
+    this.props = {colour: ''}
   }
   async componentWillMount(){
     const colourresult = await GetData()
     if(colourresult == true){
-      this.setState({colour: 'green'})
+      this.props = {colour: 'green'}
     }
     else if(colourresult == false){
-      this.setState({colour: 'red'})
+      this.props = {colour: 'red'}
     }
     else{
-      this.setState({colour: ''})
+      this.props = {colour: ''}
     }
   }
   render(){
       return (
-        document.getElementById('box1').style.color = this.state.colour
+        document.getElementById('box1').style.color = this.props.colour
       )
   }
 }
