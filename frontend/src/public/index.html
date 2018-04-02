@@ -15,7 +15,7 @@ body {
 
 /* Style the header */
 .header {
-    background-color: #f1f1f1;
+    background: linear-gradient(to bottom, #006600 0%, #ffffcc 100%);
     padding: 30px;
     text-align: center;
     font-size: 35px;
@@ -26,21 +26,21 @@ body {
     display: -webkit-flex;
     display: flex;
 }
-
-
 .column {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     padding: 10px;
     height: 300px;
-}
+    font-weight: 900
+    }
 
 /* Style the footer */
 .footer {
-    background-color: #f1f1f1;
+    background: linear-gradient(to bottom, #ffffcc 0%, #006600 100%);
     padding: 10px;
     text-align: center;
+    font-weight: 900;
 }
 
 
@@ -64,13 +64,15 @@ body {
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">Column</div>
-  <div class="column" style="background-color:#bbb;">Column</div>
+  <div class="column" style= "background: linear-gradient(to bottom, #ffffcc 0%, #ffff99 100%)">Temperature:</div>
+  <div class="column" style= "background: linear-gradient(to bottom, #ffffcc 0%, #ffff99 100%)">Light:</div>
   
 </div>
 
 <div class="footer">
-  <p></p>
+  <p>Ethical Hackering inc.</p>
+    
+<div id="root"></div>
 </div>
 
 </body>
