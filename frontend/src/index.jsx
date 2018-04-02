@@ -25,8 +25,7 @@ const GetData = async () => {
 
 
 class Game extends React.Component{
-  constructor(props){
-    super(props)
+  constructor(){
     this.props = {colour: ''}
   }
   async componentWillMount(){
@@ -40,6 +39,7 @@ class Game extends React.Component{
     else{
       this.props = {colour: ''}
     }
+    console.log(this.props.colour)
   }
   render(){
       return (
