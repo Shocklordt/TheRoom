@@ -33,7 +33,7 @@ class Game extends React.Component {
     console.log(this.state)
   }
   render(){
-    const open = this.state.open
+    const open = this.state.open._v
     if(open == false){
       return (
         document.getElementById('box1').style.color = 'red'
