@@ -26,10 +26,10 @@ const GetData = async () => {
 
 class Game extends React.Component{
   componentWillMount(){
-    const results = GetData()
+    export const results = GetData()
   }
   render(){
-    const open = results
+    const open = this.results
     if(open == false){
       return (
         document.getElementById('box1').style.color = 'red'
