@@ -29,6 +29,9 @@ class Game extends React.Component {
     super(props)
     this.state = {open: GetData()}
   }
+  async componentWillMount(){
+    console.log(this.state.open)
+  }
   render(){
     const open = this.state.open
     if(open == false){
