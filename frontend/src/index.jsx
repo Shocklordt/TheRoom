@@ -30,8 +30,14 @@ class Game extends React.Component {
   }
   render(response){
     if(response == false){
-      return document.getElementById('box1').style.color = 'red'
+      return (
+        document.getElementById('box1').style.color = 'red'
+      )
     }
+    return (
+      <div>
+      </div>
+    )
   };
 }
 
