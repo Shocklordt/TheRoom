@@ -15,8 +15,8 @@ const GetData = async () => {
     console.log("Getting greeting from "+url)
     const response = await fetch(url);
     const result = response.json()
-    console.log(result.results)
-    return result.body
+    console.log(result)
+    return result
   } catch (error) {
     console.error(error);
   }
