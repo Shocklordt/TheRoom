@@ -11,14 +11,16 @@
 
 body {
     font-family: monospace;
+    background-color: white ;
 }
 
 /* Style the header */
 .header {
-    background: linear-gradient(to bottom, #006600 0%, #ffffcc 100%);
+    background: linear-gradient(to bottom, #669999 0%, #ffffff 100%);
     padding: 30px;
     text-align: center;
     font-size: 35px;
+
 }
 
 /* Container for flexboxes */
@@ -32,13 +34,14 @@ body {
     flex: 1;
     padding: 10px;
     height: 300px;
-    font-weight: 900
+    font-weight: 900;
+    
     }
 
 /* Style the footer */
 .footer {
-    background: linear-gradient(to bottom, #ffffcc 0%, #006600 100%);
-    padding: 10px;
+    background: linear-gradient(to top, #669999 0%, #ffffff 100%);
+    padding: 30px;
     text-align: center;
     font-weight: 900;
 }
@@ -61,19 +64,19 @@ body {
 
 <div class="header">
   <h2>THE ROOM</h2>
+<div id="box1"></div>
 </div>
 
 <div class="row">
-  <div class="column" style= "background: linear-gradient(to bottom, #ffffcc 0%, #ffff99 100%)">Temperature:</div>
-  <div class="column" style= "background: linear-gradient(to bottom, #ffffcc 0%, #ffff99 100%)">Light:</div>
-  
+  <div class="column" style= "background: linear-gradient(to right, #ffffff 0%, #ffffff 100%)">Temperature:</div>
+  <div class="column" style= "background: linear-gradient(to right, #ffffff 0%, #ffffff 100%)">Light:</div>
 </div>
 
 <div class="footer">
   <p>Ethical Hackering inc.</p>
+</div>
     
 <div id="root"></div>
-</div>
 
 </body>
 </html>

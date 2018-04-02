@@ -14,9 +14,8 @@ const GetData = async () => {
     const url = `${baseURL}/room/status`
     console.log("Getting greeting from "+url)
     const response = await fetch(url);
+    console.log(response.json().body)
     return response.json()
-    console.log("mene")
-    console.log(response.body)
   } catch (error) {
     console.error(error);
   }
