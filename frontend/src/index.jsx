@@ -12,7 +12,6 @@ const baseURL = "http://195.201.28.131:9000"
 const GetData = async () => {
   try {
     const url = `${baseURL}/room/status`
-    console.log("Getting greeting from "+url)
     const response = await fetch(url);
     const results = await response.json()
     return results['results']
@@ -31,7 +30,6 @@ class Game extends React.Component{
   }
   async componentWillMount(){
     const colourresult = await GetData()
-    console.log(this.props.colour)
     if(colourresult == true){
       this.setState({colour: 'green'})
     }
@@ -41,7 +39,6 @@ class Game extends React.Component{
     else{
       this.setState({colour: ''})
     }
-    console.log(this.props.colour)
   }
   render(){
       return (
