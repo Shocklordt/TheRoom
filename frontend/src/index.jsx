@@ -30,7 +30,7 @@ class Game extends React.Component {
     this.state = {open: GetData()}
   }
   async componentWillMount(){
-    console.log(this.state.open)
+    console.log(this.state)
   }
   render(){
     const open = this.state.open
