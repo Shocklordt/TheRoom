@@ -29,7 +29,7 @@ class Game extends React.Component {
     const response = await GetData()
   }
   render(){
-    if(response == false){
+    if(Game.response == false){
       return (
         document.getElementById('box1').style.color = 'red'
       )
