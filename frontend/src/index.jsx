@@ -25,11 +25,11 @@ const GetData = async () => {
 
 
 class Game extends React.Component {
-  async componentWillMount() {
+  /**async componentWillMount() {
     this.state = {open: await GetData()}
-  }
+  }**/
   render(){
-    const open = this.state.open
+    const open = await GetData()
     if(open == false){
       return (
         document.getElementById('box1').style.color = 'red'
