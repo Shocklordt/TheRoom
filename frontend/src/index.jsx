@@ -26,21 +26,18 @@ const GetData = async () => {
 
 class Game extends React.Component{
   componentWillMount(){
-    export const results = GetData()
-  }
-  render(){
-    const open = this.results
-    if(open == false){
-      return (
-        document.getElementById('box1').style.color = 'red'
-      )
+    if(GetData()){
+      this.setState({colour: 'green'})
     }
     else{
-    return (
-      document.getElementById('box1').style.color = 'green'
-    )
+      this.setState({colour: 'red'})
+    }
   }
-  };
+  render(){
+      return (
+        document.getElementById('box1').style.color = this.state.colour
+      )
+  }
 }
 
 
