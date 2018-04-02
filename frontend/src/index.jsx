@@ -26,8 +26,9 @@ const GetData = async () => {
 
 class Game extends React.Component{
   constructor(props){
-    super(props)
-    this.props = {colour: ''}
+    super(props);
+    this.props = {colour: ''};
+    console.log(this.props)
   }
   async componentWillMount(){
     const colourresult = await GetData()
