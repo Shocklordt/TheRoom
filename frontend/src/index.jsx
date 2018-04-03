@@ -58,14 +58,14 @@ class Game extends React.Component{
       tempdat.push(arraylist[i].temperature)
     }
     console.log(tempdat)
-    render();{
+  }
+  render(){
       return(
         <div>
           </div>
       )
     }
   }
-}
 
 
 ReactDOM.render(
