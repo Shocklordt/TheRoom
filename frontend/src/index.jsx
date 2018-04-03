@@ -14,6 +14,7 @@ const getColour = async () => {
     const url = `${baseURL}/room/status`
     const response = await fetch(url);
     const result = await response.json()['resutls']
+    console.log(await result)
     if(await result == true){
       console.log("setting to green")
       return 'green'
