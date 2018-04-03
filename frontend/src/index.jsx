@@ -47,8 +47,7 @@ class Game extends React.Component{
   }
   async componentWillMount(){
     console.log(this.color)
-    const colourresult = await getColour()
-    this.color = await colourresult
+    this.color = await getColour()
     const weatherdata = await GetData()
    
     const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 1))
