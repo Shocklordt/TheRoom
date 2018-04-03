@@ -33,6 +33,7 @@ exports.status = async (ctx) => {
     let answer = {results: true}
   }
   ctx.body = await answer;
+  console.log(ctx.body)
 }
 
 exports.create = async (ctx) => {
