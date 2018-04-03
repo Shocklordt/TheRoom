@@ -4,8 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './assets/stylesheets/style.css'
-
 const baseURL = "http://195.201.28.131:9000"
+
 
 /***** PASTE YOUR CODE AFTER THIS LINE *****/
 
@@ -26,7 +26,7 @@ const GetData = async () => {
     const url = `${baseURL}/room/42`
     const response = await fetch(url)
     const results = await response.json()
-    console.log(results)
+    return results
   }catch(error){
     console.log(error)
   }
