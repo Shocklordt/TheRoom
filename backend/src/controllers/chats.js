@@ -13,7 +13,7 @@ exports.list = async (ctx) => {
   ctx.body = response;
 };
 
-exports.status = async (ctx) => {
+const getAns = async =>{
   let options = {};
   const result = await database.Chat.findAll(options);
   let weatherdata = await Promise.all(result.map(chat => chat.toJSON()))
@@ -33,8 +33,11 @@ exports.status = async (ctx) => {
   }else{
     let answer = {results: true}
   }
-  ctx.body = await answer;
-  console.log(ctx.body)
+  return await answer
+}
+
+exports.status = async (ctx) => {
+  ctx.body = await getAns();
 }
 
 exports.create = async (ctx) => {
