@@ -13,7 +13,7 @@ exports.list = async (ctx) => {
   ctx.body = response;
 };
 
-const getAns = async =>{
+const getAns = async () =>{
   let options = {};
   const result = await database.Chat.findAll(options);
   let weatherdata = await Promise.all(result.map(chat => chat.toJSON()))
