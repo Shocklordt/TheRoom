@@ -46,6 +46,7 @@ class Game extends React.Component{
     this.props = {color: ''}
   }
   async componentWillMount(){
+    console.log(Game.props.color)
     const colourresult = await getColour()
     this.props = {color: colourresult}
     const weatherdata = await GetData()
