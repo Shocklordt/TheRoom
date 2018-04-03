@@ -68,5 +68,5 @@ class Game extends React.Component{
 ReactDOM.render(
   <Game />,
   document.getElementById('root'),
-  document.getElementById('room').style.color = this.state.colour
+  document.getElementById('room').style.color = Game.state.colour
 );
