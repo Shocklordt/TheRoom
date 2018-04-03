@@ -45,17 +45,22 @@ class Game extends React.Component{
     super();
     this.state = {color: "black"};
     this.state = {temperature: ""}
+    this.state = {light: ""}
   }
   async componentWillMount(){
     this.setState({color: await getColour()})
     const weatherdata = await GetData()
     const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 0))
     var tempdat = 0
+    var ligdat = 0
     for (var i = 0; i< arraylist.length; i++){
       tempdat += arraylist[i].temperature
+      ligdat += arraylist[i].light
     }
     tempdat = Math.round(tempdat / 3)
-    this.setState({temperature: await tempdat})
+    ligdat = Math.round(ligdat / 3)
+    this.setState({temperature: await `${tempdat}°C`})
+    this.setState({light: await ligdat})
   }
   render(){
       return(
