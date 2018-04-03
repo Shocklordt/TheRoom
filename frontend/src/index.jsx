@@ -41,14 +41,14 @@ const GetData = async () => {
 }
 
 class Game extends React.Component{
-  constructor(){
-    super();
-    this.props = {color: ''}
+  constructor(color){
+    super(color);
+    this.color = ''
   }
   async componentWillMount(){
-    console.log(Game.props.color)
+    console.log(Game.color)
     const colourresult = await getColour()
-    this.props = {color: colourresult}
+    this.color = colourresult
     const weatherdata = await GetData()
    
     const arraylist = weatherdata.slice(Math.max(weatherdata.length - 3, 1))
@@ -71,6 +71,6 @@ class Game extends React.Component{
 ReactDOM.render(
   <Game />,
   document.getElementById('root'),
-  document.getElementById('room').style.color = Game.props.color,
+  document.getElementById('room').style.color = Game.color,
   document.getElementById('box1').innerHTML = 'Memes'
 );
