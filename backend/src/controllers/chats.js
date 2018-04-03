@@ -14,7 +14,7 @@ exports.list = async (ctx) => {
 };
 
 exports.status = async (ctx) => {
-  const response = await fetch("http://195.201.28.131:9000/room/42")
+  const response = await get("http://195.201.28.131:9000/room/42")
   const result = await response.json()
   const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 0))
   var tempdat = 0
