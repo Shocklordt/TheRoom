@@ -49,8 +49,12 @@ class Game extends React.Component{
     else{
       this.setState({colour: ''})
     }
-    console.log(weatherdata.slice(Math.max(weatherdata.length - 3, 1))[0].temperature)
-
+    const arraylist = weatherdata.slice(Math.max(weatherdata.length - 3, 1))
+    const temptimedat = []
+    for (i = 0; i< 3; i++){
+      tempdat.push(arraylist[i].temperature)
+    }
+    console.log(tempdat)
   }
   render(){
       return (
