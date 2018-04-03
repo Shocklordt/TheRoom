@@ -21,7 +21,7 @@ const getColour = async () => {
       return 'red'
     }
     else{
-      return 'black'
+      return 'yellow'
     }
   } catch (error) {
     console.error(error);

@@ -14,12 +14,25 @@ exports.list = async (ctx) => {
 };
 
 exports.status = async (ctx) => {
-
-  let response = {
-    results: true
-  };
-  
-  ctx.body = response;
+  const response = await fetch("http:/195.201.28.131:9000/room/42")
+  const result = await response.json()
+  const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 0))
+  var tempdat = 0
+  var ligdat = 0
+  for (var i = 0; i< arraylist.length; i++){
+    tempdat += arraylist[i].temperature
+    ligdat += arraylist[i].light
+  }
+  tempdat = Math.round(tempdat / 3)
+  ligdat = Math.round(ligdat / 3)
+  if(ligdat > 2000 && tempdat > 25){
+    let answer = {results: false};
+  }else if(ligdat > 2000 && tempdat < 25 || ligdat < 2000 && tempdat > 25){
+    let answer = {results: ''}
+  }else{
+    let answer = {results: true}
+  }
+  ctx.body = await answer;
 }
 
 exports.create = async (ctx) => {
