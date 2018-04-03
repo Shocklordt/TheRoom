@@ -15,12 +15,15 @@ const getColour = async () => {
     const response = await fetch(url);
     const result = await response.json()['resutls']
     if(result == true){
+      console.log("setting to green")
       return 'green'
     }
     else if(result == false){
+      console.log("setting to red")
       return 'red'
     }
     else{
+      console.log("setting to none")
       return ''
     }
   } catch (error) {
