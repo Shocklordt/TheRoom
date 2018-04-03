@@ -56,6 +56,12 @@ class Game extends React.Component{
       tempdat.push(arraylist[i].temperature)
     }
     console.log(tempdat)
+    render();{
+      return(
+        <div>
+          </div>
+      )
+    }
   }
 }
 
@@ -63,6 +69,6 @@ class Game extends React.Component{
 ReactDOM.render(
   <Game />,
   document.getElementById('root'),
-  document.getElementById('room').style.color = getColour(),
+  document.getElementById('room').style.color = await getColour(),
   document.getElementById('box1').innerHTML = 'Memes'
 );
