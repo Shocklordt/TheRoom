@@ -59,7 +59,7 @@ class Game extends React.Component{
   }
   render(){
       return(
-        this.props,
+        document.getElementById('room').style.color = this.color,
         <div></div>
       )
     }
@@ -69,7 +69,7 @@ class Game extends React.Component{
 ReactDOM.render(
   <Game />,
   document.getElementById('root'),
-  document.getElementById('room').style.color = Game.color,
+  ,
   document.getElementById('box1').innerHTML = 'Numbers',
   document.getElementById('box2').innerHTML = 'More Numbers'
 );
