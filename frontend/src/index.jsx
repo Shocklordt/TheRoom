@@ -59,7 +59,7 @@ class Game extends React.Component{
   }
   render(){
       return(
-        document.getElementById('room').style.color = getColour(),
+        document.getElementById('room').style.color = this.color,
         <div></div>
       )
     }
