@@ -53,7 +53,7 @@ class Game extends React.Component{
     const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 1))
     const tempdat = []
     for (var i = 0; i< 3; i++){
-      console.log(arraylist)
+      console.log(arraylist[i])
       tempdat.push(arraylist[i].temperature)
     }
     console.log(tempdat)
