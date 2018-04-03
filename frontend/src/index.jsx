@@ -43,7 +43,7 @@ const GetData = async () => {
 class Game extends React.Component{
   constructor(color){
     super(color);
-    this.color = ''
+    this.color = 'black'
   }
   async componentWillMount(){
     console.log(this.color)
@@ -55,7 +55,7 @@ class Game extends React.Component{
       console.log(arraylist[i])
       tempdat.push(arraylist[i].temperature)
     }
-    console.log(await this.color)
+    console.log(this.color)
   }
   render(){
       return(
