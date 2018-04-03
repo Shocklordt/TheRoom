@@ -50,7 +50,7 @@ class Game extends React.Component{
     this.setState({color: await getColour()})
     const weatherdata = await GetData()
     const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 0))
-    const tempdat = 0
+    var tempdat = 0
     for (var i = 0; i< arraylist.length; i++){
       tempdat += arraylist[i].temperature
     }
