@@ -9,7 +9,7 @@ const baseURL = "http://195.201.28.131:9000"
 
 /***** PASTE YOUR CODE AFTER THIS LINE *****/
 
-const GetData = async () => {
+const GetBooleanData = async () => {
   try {
     const url = `${baseURL}/room/status`
     const response = await fetch(url);
@@ -21,7 +21,16 @@ const GetData = async () => {
   return { greeting: "error"};
 };
 
-
+const GetData = async () => {
+  try{
+    const url = `${baseURL}/room/42`
+    const response = await fetch(url)
+    const results = await response.json()
+    console.log(results)
+  }catch(error){
+    console.log(error)
+  }
+}
 
 class Game extends React.Component{
   constructor(){
@@ -29,7 +38,8 @@ class Game extends React.Component{
     this.state = {colour: ''}
   }
   async componentWillMount(){
-    const colourresult = await GetData()
+    const colourresult = await GetBooleanData()
+    const weatherdata = await GetData()
     if(colourresult == true){
       this.setState({colour: 'green'})
     }
@@ -39,6 +49,8 @@ class Game extends React.Component{
     else{
       this.setState({colour: ''})
     }
+    console.log(weatherdata)
+
   }
   render(){
       return (
