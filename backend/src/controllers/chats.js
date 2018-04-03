@@ -27,11 +27,11 @@ const getAns = async () =>{
   tempdat = Math.round(tempdat / 3)
   ligdat = Math.round(ligdat / 3)
   if(ligdat > 2000 && tempdat > 25){
-    let answer = {results: false};
+    const answer = {results: false};
   }else if(ligdat > 2000 && tempdat < 25 || ligdat < 2000 && tempdat > 25){
-    let answer = {results: ''}
+    const answer = {results: ''}
   }else{
-    let answer = {results: true}
+    const answer = {results: true}
   }
   return await answer
 }
