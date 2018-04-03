@@ -49,13 +49,13 @@ class Game extends React.Component{
     else{
       this.setState({colour: ''})
     }
-    console.log(weatherdata)
+    console.log(weatherdata.slice(Math.max(weatherdata.length - 2, 1)))
 
   }
   render(){
       return (
         document.getElementById('room').style.color = this.state.colour,
-        document.getElementById('box1').innerHTML = stuff
+        document.getElementById('box1').innerHTML = ''
       )
   }
 }
