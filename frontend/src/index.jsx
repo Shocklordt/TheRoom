@@ -26,7 +26,7 @@ const GetData = async () => {
     const url = `${baseURL}/room/42`
     const response = await fetch(url)
     const results = await response.json()
-    return results
+    return results.results
   }catch(error){
     console.error(error)
   }
@@ -49,12 +49,13 @@ class Game extends React.Component{
     else{
       this.setState({colour: ''})
     }
-    console.log(weatherdata.slice(Math.max(weatherdata.length -3, 1)))
+    console.log(weatherdata)
 
   }
   render(){
       return (
-        document.getElementById('box1').style.color = this.state.colour
+        document.getElementById('room').style.color = this.state.colour,
+        document.getElementById('box1').innerHTML = stuff
       )
   }
 }
