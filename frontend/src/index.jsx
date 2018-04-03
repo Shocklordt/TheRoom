@@ -28,7 +28,7 @@ const GetData = async () => {
     const results = await response.json()
     return results
   }catch(error){
-    console.log(error)
+    console.error(error)
   }
 }
 
@@ -49,7 +49,7 @@ class Game extends React.Component{
     else{
       this.setState({colour: ''})
     }
-    console.log(weatherdata)
+    console.log(weatherdata.slice(Math.max(weatherdata.length -3, 1)))
 
   }
   render(){
