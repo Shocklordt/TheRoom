@@ -9,12 +9,20 @@ const baseURL = "http://195.201.28.131:9000"
 
 /***** PASTE YOUR CODE AFTER THIS LINE *****/
 
-const GetBooleanData = async () => {
+const getColour = async () => {
   try {
     const url = `${baseURL}/room/status`
     const response = await fetch(url);
-    const results = await response.json()
-    return results['results']
+    const result = await response.json()['resutls']
+    if(result == true){
+      return 'green'
+    }
+    else if(colourresult == false){
+      return 'red'
+    }
+    else{
+      return ''
+    }
   } catch (error) {
     console.error(error);
   }
@@ -40,15 +48,7 @@ class Game extends React.Component{
   async componentWillMount(){
     const colourresult = await GetBooleanData()
     const weatherdata = await GetData()
-    if(colourresult == true){
-      this.setState({colour: 'green'})
-    }
-    else if(colourresult == false){
-      this.setState({colour: 'red'})
-    }
-    else{
-      this.setState({colour: ''})
-    }
+   
     const arraylist = weatherdata.slice(Math.max(weatherdata.length - 3, 1))
     const tempdat = []
     for (var i = 0; i< 3; i++){
@@ -57,16 +57,12 @@ class Game extends React.Component{
     }
     console.log(tempdat)
   }
-  render(){
-      return (
-        document.getElementById('box1').innerHTML = 'Memes'
-      )
-  }
 }
 
 
 ReactDOM.render(
   <Game />,
   document.getElementById('root'),
-  document.getElementById('room').style.color = Game.state.colour
+  document.getElementById('room').style.color = getColour(),
+  document.getElementById('box1').innerHTML = 'Memes'
 );
