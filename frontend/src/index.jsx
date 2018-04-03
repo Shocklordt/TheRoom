@@ -56,12 +56,11 @@ class Game extends React.Component{
       tempdat.push(arraylist[i].temperature)
     }
     console.log(this.color)
-    this.props = {color: 'red'}
   }
   render(){
       return(
-        <div>
-          </div>
+        this.props,
+        <div></div>
       )
     }
   }
