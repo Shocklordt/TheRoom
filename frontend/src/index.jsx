@@ -47,7 +47,7 @@ class Game extends React.Component{
   }
   async componentWillMount(){
     console.log(this.state.color)
-    this.setState({color: await getColour}())
+    this.setState({color: await getColour()})
     const weatherdata = await GetData()
     const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 0))
     const tempdat = []
