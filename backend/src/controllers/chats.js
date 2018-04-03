@@ -14,9 +14,9 @@ exports.list = async (ctx) => {
 };
 
 exports.status = async (ctx) => {
-  const response = await fetch("http://195.201.28.131:9000/room/42")
-  console.log(response)
-  const result = await response.json()
+  let options = {};
+  const result = await database.Chat.findAll(options);
+  let weatherdata = await Promise.all(result.map(chat => chat.toJSON()))
   const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 0))
   var tempdat = 0
   var ligdat = 0
