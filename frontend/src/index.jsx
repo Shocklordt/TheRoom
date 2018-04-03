@@ -43,19 +43,20 @@ const GetData = async () => {
 class Game extends React.Component{
   constructor(color){
     super(color);
-    this.props.color = 'black'
+    this.color = 'black'
   }
   async componentWillMount(){
-    console.log(this.props.color)
-    this.props.color = await getColour()
+    console.log(this.color)
+    this.color = await getColour()
     const weatherdata = await GetData()
     const arraylist = await weatherdata.slice(Math.max(weatherdata.length - 3, 0))
     const tempdat = []
     for (var i = 0; i< arraylist.length; i++){
-      console.log(arraylist[i]) 
+      console.log(arraylist[i])
       tempdat.push(arraylist[i].temperature)
     }
-    console.log(this.props.color)
+    console.log(this.color)
+    this.props = {color: 'red'}
   }
   render(){
       return(
@@ -69,7 +70,7 @@ class Game extends React.Component{
 ReactDOM.render(
   <Game />,
   document.getElementById('root'),
-  document.getElementById('room').style.color = Game.props.color,
+  document.getElementById('room').style.color = Game.color,
   document.getElementById('box1').innerHTML = 'Numbers',
   document.getElementById('box2').innerHTML = 'More Numbers'
 );
