@@ -66,6 +66,7 @@ class Game extends React.Component{
       return(
         document.getElementById('room').style.color = this.state.color,
         document.getElementById('box1').innerHTML = this.state.temperature,
+        document.getElementById('box2').innerHTML = this.state.light,
         <div></div>
       )
     }
