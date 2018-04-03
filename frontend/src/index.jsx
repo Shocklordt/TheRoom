@@ -50,7 +50,7 @@ class Game extends React.Component{
       this.setState({colour: ''})
     }
     const arraylist = weatherdata.slice(Math.max(weatherdata.length - 3, 1))
-    const temptimedat = []
+    const tempdat = []
     for (i = 0; i< 3; i++){
       tempdat.push(arraylist[i].temperature)
     }
@@ -59,7 +59,7 @@ class Game extends React.Component{
   render(){
       return (
         document.getElementById('room').style.color = this.state.colour,
-        document.getElementById('box1').innerHTML = ''
+        document.getElementById('box1').innerHTML = 'Memes'
       )
   }
 }
