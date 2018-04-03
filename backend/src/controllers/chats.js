@@ -27,13 +27,12 @@ const getAns = async () =>{
   tempdat = Math.round(tempdat / 3)
   ligdat = Math.round(ligdat / 3)
   if(ligdat > 2000 && tempdat > 25){
-    const answer = {results: false};
+    return {results: false};
   }else if(ligdat > 2000 && tempdat < 25 || ligdat < 2000 && tempdat > 25){
-    const answer = {results: ''}
+    return answer = {results: ''}
   }else{
-    const answer = {results: true}
+    return {results: true}
   }
-  return await answer
 }
 
 exports.status = async (ctx) => {
