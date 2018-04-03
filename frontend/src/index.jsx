@@ -49,7 +49,7 @@ class Game extends React.Component{
     else{
       this.setState({colour: ''})
     }
-    console.log(weatherdata.slice(Math.max(weatherdata.length - 2, 1)))
+    console.log(weatherdata.slice(Math.max(weatherdata.length - 3, 1))[0].temperature)
 
   }
   render(){
