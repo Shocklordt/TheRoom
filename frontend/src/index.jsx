@@ -69,7 +69,6 @@ class Game extends React.Component{
 ReactDOM.render(
   <Game />,
   document.getElementById('root'),
-  ,
   document.getElementById('box1').innerHTML = 'Numbers',
   document.getElementById('box2').innerHTML = 'More Numbers'
 );
