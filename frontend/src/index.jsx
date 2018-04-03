@@ -54,7 +54,7 @@ class Game extends React.Component{
     for (var i = 0; i< arraylist.length; i++){
       tempdat.push(arraylist[i].temperature)
     }
-    this.setState({temperature: await tempdat.json()})
+    this.setState({temperature: await JSON.stringify(tempdat)})
   }
   render(){
       return(
