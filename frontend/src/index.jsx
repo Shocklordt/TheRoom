@@ -17,7 +17,7 @@ const getColour = async () => {
     if(await result['results'] == true){
       return 'green'
     }
-    else if(result == false){
+    else if(await result['results'] == false){
       return 'red'
     }
     else{
